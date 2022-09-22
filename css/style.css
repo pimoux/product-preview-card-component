@@ -8,6 +8,11 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
+}
+
+#main {
   width: 100%;
   height: 100vh;
   background-color: #f2ebe3;
@@ -36,7 +41,7 @@ body {
           flex-direction: column;
 }
 
-.card .image {
+.card picture .image {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   background-size: cover;
@@ -123,33 +128,21 @@ body {
           filter: brightness(80%);
 }
 
-.image.mobile {
-  display: block;
-}
-
-.image.desktop {
-  display: none;
-}
-
 @media screen and (min-width: 1440px) {
-  .image.mobile {
-    display: none;
-  }
-  .image.desktop {
-    display: block;
-  }
   .card {
-    width: 41%;
+    width: 45%;
     height: 56vh;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .card .image {
+  .card picture .image {
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0rem;
     border-bottom-left-radius: 0.5rem;
+    height: 100%;
+    width: auto;
   }
   .card .content {
     padding: 1.5rem 2rem 2rem 2rem;
@@ -158,12 +151,13 @@ body {
     margin-bottom: 20px;
   }
   .card .content .essence {
-    font-size: 32px;
+    font-size: 2.1rem;
     margin-bottom: 24px;
-    line-height: 32px;
+    line-height: 2.1rem;
   }
   .card .content .prices {
-    margin-bottom: 8px;
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
   .card .content .prices p:first-child {
     letter-spacing: 1px;
@@ -172,9 +166,6 @@ body {
   .card .content .prices p:last-child {
     margin-top: 4px;
     font-size: 12px;
-  }
-  .card .content .add-to-cart {
-    margin-top: 27px;
   }
 }
 /*# sourceMappingURL=style.css.map */
